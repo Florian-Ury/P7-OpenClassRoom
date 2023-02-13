@@ -5,14 +5,42 @@ import reportWebVitals from './reportWebVitals';
 import Header from "./components/Header";
 import GlobalStyle from "./utils/styles/GlobalStyle";
 import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import styled from "styled-components";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import LogementDetails from "./pages/Fiche_Logement";
+import Apropos from "./components/A_Propos";
+
+const DesignBody = styled.div`
+        display: flex;
+        justify-content: center;
+        background: #FFFFFF;
+}
+`
+
+const DesignApp = styled.div`
+    width: 80%
+`
 
 function App() {
     return (
-        <div>
-            <GlobalStyle />
-            <Header />
-            <Footer />
-        </div>
+
+    <Router>
+        <DesignBody>
+            <DesignApp>
+                <GlobalStyle />
+                <Header />
+                <Routes>
+                    <Route exact path="/" element={<Home />} />
+                    <Route path="/logement/:id" element={<LogementDetails />} />
+                    <Route path="/a_propos" element={<Apropos />} />
+                    {/*<Route path="/freelances" element={<Freelances />} />*/}
+                    {/*<Route path={"*"} element={<Error />}/>*/}
+                </Routes>
+                <Footer />
+            </DesignApp>
+        </DesignBody>
+    </Router>
     )
 }
 

@@ -6,7 +6,8 @@ import {StyledLink} from '../../utils/styles/linkStyle'
 const HeaderContainer = styled.header`
     display: flex;
     justify-content: space-between;
-    margin: 10px;
+    align-items: center;
+    margin: 25px;
 `
 const NavContainer = styled.nav`
     display: flex;
@@ -17,10 +18,10 @@ const NavContainer = styled.nav`
 function Header() {
     return (
         <HeaderContainer>
-            <img src={logo} alt={"This is a alt"}></img>
+            <img src={logo} alt={"Logo de l'entreprise"}></img>
             <NavContainer>
-                <StyledLink href="/">Accueil</StyledLink>
-                <StyledLink href="/">A Propos</StyledLink>
+                <StyledLink to="/">Accueil</StyledLink>
+                <StyledLink to="/a_propos/">A Propos</StyledLink>
             </NavContainer>
         </HeaderContainer>
     )

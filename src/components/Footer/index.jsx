@@ -3,13 +3,14 @@ import logo from '../../assets/logoFooter.svg'
 import styled from "styled-components";
 
 const FooterContainer = styled.footer`
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background: black;
     width: 100%;
-    position: fixed;
-    padding: 20px;
+    height: 209px;
     left: 0%;
 `
 const FooterImg = styled.img`
