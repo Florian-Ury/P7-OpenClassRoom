@@ -9,5 +9,9 @@ export const StyledLink = styled(Link)`
   font-weight: 500;
   font-style: normal;
   font-size: 24px;
-  color : ${ colors.primary }
+  color : ${ colors.primary };
+  &:focus {
+    text-decoration-line: underline;
+  }
 `
+

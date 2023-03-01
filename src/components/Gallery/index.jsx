@@ -3,10 +3,11 @@ import styled from "styled-components";
 import {Link} from "react-router-dom";
 
 const GalleryWrapper = styled.div`
-    
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
     width: 340px;
     height: 340px;
-    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
 `
 
 const ImgWrapper = styled.img`
@@ -14,6 +15,7 @@ const ImgWrapper = styled.img`
     width: 340px;
     height: 340px;
     border-radius: 10px;
+    object-fit: cover;
     
 `
 

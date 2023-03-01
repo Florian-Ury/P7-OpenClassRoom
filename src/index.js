@@ -4,12 +4,13 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Header from "./components/Header";
 import GlobalStyle from "./utils/styles/GlobalStyle";
-import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import styled from "styled-components";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LogementDetails from "./pages/Fiche_Logement";
-import Apropos from "./components/A_Propos";
+import Apropos from "./pages/A_Propos";
+import Error from "./pages/Error";
+import Footer from "./components/Footer";
 
 const DesignBody = styled.div`
         display: flex;
@@ -34,8 +35,7 @@ function App() {
                     <Route exact path="/" element={<Home />} />
                     <Route path="/logement/:id" element={<LogementDetails />} />
                     <Route path="/a_propos" element={<Apropos />} />
-                    {/*<Route path="/freelances" element={<Freelances />} />*/}
-                    {/*<Route path={"*"} element={<Error />}/>*/}
+                    <Route path={"*"} element={<Error />}/>
                 </Routes>
                 <Footer />
             </DesignApp>
