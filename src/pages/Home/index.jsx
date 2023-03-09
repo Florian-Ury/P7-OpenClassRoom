@@ -15,7 +15,18 @@ const HeadBodyContainer = styled.div`
         border-radius: 25px;
         width: 100%;
         margin: 20px 0px;
+        @media (max-width: 375px) {
+            width: 335px;
+            height: 111px;
+        }
         
+`
+const BodyCenter = styled.div`
+    @media (max-width: 375px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 `
 const BackgroundImg = styled.img`
         position: relative;
@@ -23,6 +34,10 @@ const BackgroundImg = styled.img`
         border-radius: 25px;
         height: 223px;
         opacity: 0.7;
+        @media (max-width: 375px) {
+            width: 335px;
+            height: 111px;
+        }
 `
 
 const DescBody = styled.h1`
@@ -30,6 +45,12 @@ const DescBody = styled.h1`
     color: white;
     font-weight: 500;
     font-size: 48px;
+    @media (max-width: 375px) {
+            width: 217px;
+            height: 48px;
+            font-size: 24px;
+            left: 10%;
+        }
 `
 const GalleryContainer = styled.div`
         display: flex;
@@ -39,13 +60,18 @@ const GalleryContainer = styled.div`
         background: #F6F6F6;
         padding: 20px;
         border-radius: 25px;
+        @media (max-width: 375px) {
+            max-width: 335px;
+            width: 100%;
+            background: white;
+        }
 `
 
 
 function Home() {
 
     return (
-        <div>
+        <BodyCenter>
             <HeadBodyContainer>
                     <BackgroundImg src={backgroundImg} alt={"image de fond montagneux"} />
                     <DescBody>Chez vous, partout et ailleurs</DescBody>
@@ -60,7 +86,7 @@ function Home() {
                    />
                 ))}
             </GalleryContainer>
-        </div>
+        </BodyCenter>
     )
 }
 

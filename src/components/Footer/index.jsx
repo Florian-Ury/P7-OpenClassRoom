@@ -21,6 +21,10 @@ const FooterDesc = styled.span`
     color: white;
     font-weight: 500;
     font-size: 24px;
+    @media (max-width: 375px) {
+        font-size: 12px;
+        padding-top: 25px;
+    }
 `
 
 function Footer(){

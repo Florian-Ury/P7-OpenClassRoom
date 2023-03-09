@@ -20,7 +20,11 @@ const DesignBody = styled.div`
 `
 
 const DesignApp = styled.div`
-    width: 80%
+    width: 80%;
+     @media (max-width: 375px) {
+            width: 95%
+        }
+        
 `
 
 function App() {

@@ -1,29 +1,56 @@
 import React from "react";
 import Collapse from "../../components/Collapse";
 import styled from "styled-components";
-import ImageAbout from "../../assets/BackgroundAbout.png"
+import ImageAbout from "../../assets/BackgroundAbout.png";
+import AboutImgMobile from "../../assets/AboutMobile.jpg"
 
-const ImgAbout = styled.img`
-    background: black;
-    mix-blend-mode: darken;
+const ImgAbout = styled.div`
     border-radius: 25px;
     max-width: 1920px;
+    background: url(${ImageAbout});
     width: 100%;
+    opacity: 0.9;
     object-fit: cover;
+    height: 223px;
+    @media (max-width: 375px) {
+        background: url(${AboutImgMobile});
+        max-width: 336px;
+        width:100%;
+        border-radius: 10px;
+        text-align: -webkit-center;
+    }
 `
 
 const ContainerCollapse = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media (max-width: 375px) {
+    align-items: normal;
+    }
 `
 
 const CollapseDiv = styled.div`
     max-width: 1024px;
     width: 100%;
     margin: 10px;
-    max-height: 223px;
-    height: 100%;
+    height: auto;
+    @media (max-width: 375px) {
+        max-width: 320px;
+        width: 100%;
+        margin: 10px 0px;
+    }
+`
+const DarkenDiv = styled.div`
+    background: #000000;
+    border-radius: 25px;
+    height: 223px;
+    overflow: hidden;
+    @media (max-width: 375px) {
+        max-width: 336px;
+        width:100%;
+        border-radius: 10px;
+    }
 `
 
 function Apropos(){
@@ -34,7 +61,9 @@ function Apropos(){
 
     return(
         <div>
-            <ImgAbout src={ImageAbout} alt="Picture of mountain"/>
+            <DarkenDiv>
+                <ImgAbout/>
+            </DarkenDiv>
             <ContainerCollapse>
 
                 <CollapseDiv>

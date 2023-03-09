@@ -26,6 +26,11 @@ const TitleDesc = styled.h3`
     font-size: 18px;
     margin: 0;
     z-index: 999;
+    @media (max-width: 375px) {
+        width: 320px;
+        max-height: 30px;
+        font-size: 13px;
+    }
 `
 const TextDescription = styled.p`
     display: none;
@@ -40,6 +45,14 @@ const TextDescription = styled.p`
     margin-top: -15px;
     border-radius: 15px;
     height: 100%;
+    max-height: 209px;
+    @media (max-width: 375px) {
+        max-height: 103px;
+        font-size: 12px;
+        width: 320px;
+        margin-bottom: auto;
+        padding-bottom: 15px;
+    }
 `
 const ListStyled = styled.ul`
     display: none;
@@ -47,23 +60,39 @@ const ListStyled = styled.ul`
     list-style: none;
     width: 100%;
     background: #F6F6F6;
-    padding: 5px;
+    padding: 6px;
     padding-top: 35px;
     margin: 0;
     margin-top: -15px;
     border-radius: 15px;
     height: 100%;
+    max-height: 209px;
+    @media (max-width: 375px) {
+        max-height: 113px;
+        font-size: 12px;
+        padding-top: 25px;
+        width: 323px;
+    }
 `
 const ListItemStyled = styled.li`
     padding-left: 15px;
-    margin: 5px;
     color: ${Colors.primary};
     font-size: 18px;
+    height: 100%;
+    @media (max-width: 375px) {
+        max-height: 103px;
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
 `
 
 const VectorImg = styled.img`
     object-fit: cover;
     padding-right: 10px;
+    @media (max-width: 375px) {
+        width: 8.96px;
+        height: 15.2;
+    }
 `
 
 

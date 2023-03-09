@@ -13,5 +13,9 @@ export const StyledLink = styled(Link)`
   &:focus {
     text-decoration-line: underline;
   }
+  @media (max-width: 375px) {
+            font-size: 12px;
+            padding: 0px;
+        }
 `
 

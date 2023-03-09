@@ -8,6 +8,19 @@ const HeaderContainer = styled.header`
     justify-content: space-between;
     align-items: center;
     margin: 25px;
+    @media (max-width: 375px) {
+            width: 335px;
+            margin: 20px 10px;
+    }
+    @media (max-width: 768px) {
+            width: 140px;
+    }
+`
+
+const LogoImg = styled.img`
+    @media (max-width: 375px) {
+            width: 145px;
+        }
 `
 
 
@@ -16,7 +29,7 @@ function Header() {
 
     return (
         <HeaderContainer>
-            <img src={logo} alt={"Logo de l'entreprise"}></img>
+            <LogoImg src={logo} alt={"Logo de l'entreprise"}></LogoImg>
             <Navbar />
         </HeaderContainer>
     )

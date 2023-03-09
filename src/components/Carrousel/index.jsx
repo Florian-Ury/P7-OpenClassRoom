@@ -19,6 +19,10 @@ const VectorDroit = styled.img`
     &:active {
         transform: translateY(-50%) scale(0.9);
     }
+    @media (max-width : 375px) {
+        width: 11.67px;
+        height: 19.8px;
+    }
 `
 const VectorGauche = styled.img`
     position: absolute;
@@ -35,6 +39,10 @@ const VectorGauche = styled.img`
     &:active {
         transform: translateY(-50%) scale(0.9);
     }
+    @media (max-width : 375px) {
+        width: 11.67px;
+        height: 19.8px;
+    }
 `
 const CarrouselContainer = styled.section`
         position: relative;
@@ -43,12 +51,19 @@ const CarrouselContainer = styled.section`
         background-size: cover;
         border-radius: 25px;
         mix-blend-mode: normal;
+        @media (max-width : 375px) {
+            width 335px;
+            height: 255px;
+        }
     `
 const NumberOfSlide = styled.span`
         position: absolute;
         bottom: 5%;
         left: 50%;
         color: white;
+        @media (max-width : 375px) {
+            display: none;
+        }
 `
 
 function Carrousel({imageSlider}){
