@@ -9,18 +9,29 @@ const HeaderContainer = styled.header`
     align-items: center;
     margin: 25px;
     @media (max-width: 375px) {
-            width: 335px;
+            max-width: 335px;
+            width: auto;
             margin: 20px 10px;
     }
-    @media (max-width: 768px) {
-            width: 140px;
+    @media (max-width: 768px) and (min-width: 376px) {
+            width: 100%;
+            max-width: 690px;
+            margin: 20px 0px 20px 0px;
     }
-`
+    
+  `
 
 const LogoImg = styled.img`
+    object-fit: cover;
     @media (max-width: 375px) {
-            width: 145px;
+            max-width: 145px;
+            width: 100%;
         }
+    @media (max-width: 768px) and (min-width: 376px) {
+            width: 100%;
+            max-width: 145px;
+    }
+      
 `
 
 

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import logementList from '../../logements.json';
 import Gallery from "../../components/Gallery";
 
+//Head Body with background image & Title
 const HeadBodyContainer = styled.div`
         background: #000000;
         height: 223px;     
@@ -16,8 +17,13 @@ const HeadBodyContainer = styled.div`
         width: 100%;
         margin: 20px 0px;
         @media (max-width: 375px) {
-            width: 335px;
+            max-width: 335px;
+            width: 100%;
             height: 111px;
+        }
+        @media (max-width: 768px) and (min-width: 376px) {
+            max-width: 690px;
+            width: 100%;
         }
         
 `
@@ -35,8 +41,13 @@ const BackgroundImg = styled.img`
         height: 223px;
         opacity: 0.7;
         @media (max-width: 375px) {
-            width: 335px;
+            max-width: 335px;
+            width: 100%;
             height: 111px;
+        }
+        @media (max-width: 768px) and (min-width: 376px) {
+            max-width: 690px;
+            width: 100%;
         }
 `
 
@@ -44,26 +55,40 @@ const DescBody = styled.h1`
     position absolute;
     color: white;
     font-weight: 500;
-    font-size: 48px;
+    font-size: 40px;
     @media (max-width: 375px) {
             width: 217px;
             height: 48px;
             font-size: 24px;
             left: 10%;
         }
+    @media (max-width: 768px) and (min-width: 376px) {
+        font-size: 26px;
+        max-width: 690px;
+        width: 80%;
+        text-align-last: center;
+    }
 `
 const GalleryContainer = styled.div`
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
+        width: auto;
         background: #F6F6F6;
         padding: 20px;
         border-radius: 25px;
         @media (max-width: 375px) {
             max-width: 335px;
-            width: 100%;
+            width: auto;
+            padding: 0;
             background: white;
+        }
+        @media (max-width: 768px) and (min-width: 376px) {
+            max-width : 690px;
+            padding: 0;
+            background: white;
+               
         }
 `
 

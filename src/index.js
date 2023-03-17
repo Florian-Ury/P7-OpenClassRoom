@@ -23,7 +23,10 @@ const DesignApp = styled.div`
     width: 80%;
      @media (max-width: 375px) {
             width: 95%
-        }
+     }
+     @media (max-width: 768px) and (min-width: 376px) {
+           width: 90%;
+     }
         
 `
 

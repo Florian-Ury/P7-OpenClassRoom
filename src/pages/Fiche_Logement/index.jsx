@@ -15,6 +15,9 @@ const TitleStyled = styled.h1`
     @media (max-width : 375px) {
         font-size: 18px;
     }
+    @media (max-width: 768px) and (min-width: 376px) {
+            font-size: 21px;
+    }
 
 `
 const LocationContainer = styled.span`
@@ -22,13 +25,25 @@ const LocationContainer = styled.span`
     @media (max-width : 375px) {
         font-size: 14px;
     }
+    @media (max-width: 768px) and (min-width: 376px) {
+            font-size: 17px;
+    }
 `
+
+// List of the tag
 const ListeContainer = styled.ul`
     display: flex;
     list-style: none;
     padding: 5px;
+    flex-wrap: wrap;
      @media (max-width : 375px) {
         padding: 0;
+    }
+    @media (max-width: 768px) and (min-width: 376px) {
+            max-width 190px;
+            width: 100%;
+            padding: 0;
+            
     }
 
 `
@@ -36,7 +51,8 @@ const ListeStyled = styled.li`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 115px;
+    min-width: 115px;
+    width: auto;
     height: 35px;
     background: ${colors.primary};
     color: white;
@@ -54,22 +70,43 @@ const ListeStyled = styled.li`
         padding: 0;
         font-size: 10px;
     }
+    @media (max-width: 768px) and (min-width: 376px) {
+           min-width: 84px;
+           font-size: 12px;
+    }
 `
+//Collapse
 const CollapseContainer = styled.div`
     display: flex;
     max-width: 1920px;
     justify-content: space-between;
     @media (max-width : 375px) {
         flex-direction : column;
-        width: 335px;
+        max-width: 335px;
+        width: 100%;
         justify-content: normal;
+    }
+    @media (max-width: 768px) and (min-width: 376px) {
+            max-width: 690px;
+            flex-direction: column;
     }
 `
 const CollapseDiv = styled.div`
-    max-width: 624px;
-    width: 100%;
-    height: auto;
+    width: 45%;
+    margin-right: 10px;
+    margin-left: 10px;
+    max-height: 249px;
+    height: 100%;
     margin-bottom: 20px;
+    @media (max-width: 768px) and (min-width: 376px) {
+            max-width: 690px;
+            width: auto;
+    }
+    @media (max-width : 375px) {
+        margin-right: 0px;
+        margin-left: 0px;
+        width: auto;
+    }
 `
 const ImgRating = styled.img`
     object-fit : cover;
@@ -105,6 +142,10 @@ const TopContent= styled.div`
     @media (max-width : 375px) {
         flex-direction: column;
     }
+    @media (max-width: 768px) and (min-width: 376px) {
+            max-width 690px;
+            width: 100%;
+    }
 
 `
 const OwnerRatingContent = styled.div`
@@ -118,24 +159,32 @@ const OwnerRatingContent = styled.div`
         justify-content: space-between;
         max-width: 335px;
     }
+    @media (max-width: 768px) and (min-width: 376px) {
+            max-width: 335px;
+            width: 100%;
+            flex-wrap: nowrap;
+            align-items: flex-end;
+    }
 `
 
 const OwnerDiv = styled.span`
     display: flex;
-    width: 200px;
+    max-width: 200px;
+    width: 100%
     justify-content: space-around;
     @media (max-width : 375px) {
-        width: 135px;
+        max-width: 135px;
         height: 33px;
     }
 `
 const RatingStar = styled.span`
     display: flex;
     justify-content: flex-end;
-    width: 196px;
+    max-width: 196px;
+    width: 100%;
     height: 36px;
     @media (max-width : 375px) {
-        width: 98px;
+        max-width: 98px;
         height: 18px;
     }
 `
@@ -195,7 +244,7 @@ function LogementDetails() {
                         </TopContent>
                         <CollapseContainer>
                             <CollapseDiv>
-                                <Collapse title={"Description"} type={"p"} data={currentData[0].description} height={"143.32px"}/>
+                                <Collapse title={"Description"} type={"p"} data={currentData[0].description}/>
                             </CollapseDiv>
                             <CollapseDiv>
                                 <Collapse title={"Équipements"} type={"li"} data={currentData[0].equipments}/>

@@ -8,7 +8,7 @@ import Colors from "../../utils/styles/colors";
 const DivStyled = styled.div`
     position: relative;
     width: 100%;
-    height: 100%;
+    height: auto;
 `
 
 const TitleDesc = styled.h3`
@@ -18,7 +18,7 @@ const TitleDesc = styled.h3`
     align-items: center;
     background: ${colors.primary};
     width: 100%;
-    height: 52px;
+    height: 42px;
     border-radius: 5px;
     color: white;
     padding-left: 15px;
@@ -27,9 +27,14 @@ const TitleDesc = styled.h3`
     margin: 0;
     z-index: 999;
     @media (max-width: 375px) {
-        width: 320px;
+        max-width: 320px;
+        width: auto;
         max-height: 30px;
         font-size: 13px;
+    }
+    @media (max-width: 768px) and (min-width: 376px) {
+        max-width: 670px;
+        width: auto;
     }
 `
 const TextDescription = styled.p`
@@ -43,17 +48,23 @@ const TextDescription = styled.p`
     padding-top: 35px;
     margin: 0;
     margin-top: -15px;
+    min-height: 209px;
+    height: auto;
     border-radius: 15px;
-    height: 100%;
-    max-height: 209px;
     @media (max-width: 375px) {
-        max-height: 103px;
+        min-height: 103px;
         font-size: 12px;
-        width: 320px;
+        max-width: 320px;
+        width: auto;
         margin-bottom: auto;
         padding-bottom: 15px;
     }
-`
+    @media (max-width: 768px) and (min-width: 376px) {
+        max-width: 675px;
+        width: auto;
+        font-size: 16px;
+    }
+    `
 const ListStyled = styled.ul`
     display: none;
     flex-direction: column;
@@ -65,13 +76,18 @@ const ListStyled = styled.ul`
     margin: 0;
     margin-top: -15px;
     border-radius: 15px;
-    height: 100%;
-    max-height: 209px;
+    min-height: 209px;
+    height: auto;
     @media (max-width: 375px) {
-        max-height: 113px;
+        min-height: 113px;
         font-size: 12px;
         padding-top: 25px;
-        width: 323px;
+        max-width: 323px;
+        width: auto;
+    }
+    @media (max-width: 768px) and (min-width: 376px) {
+        max-width: 675px;
+        width: auto;
     }
 `
 const ListItemStyled = styled.li`
@@ -83,6 +99,9 @@ const ListItemStyled = styled.li`
         max-height: 103px;
         font-size: 12px;
         margin-bottom: 5px;
+    }
+    @media (max-width: 768px) and (min-width: 376px) {
+        font-size: 16px;
     }
 `
 

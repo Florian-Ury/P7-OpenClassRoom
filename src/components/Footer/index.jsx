@@ -12,6 +12,7 @@ const FooterContainer = styled.footer`
     width: 100%;
     height: 209px;
     left: 0%;
+    margin-top: 50px;
 `
 const FooterImg = styled.img`
     width : 100px

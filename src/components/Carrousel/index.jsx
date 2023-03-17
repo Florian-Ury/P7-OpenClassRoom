@@ -23,6 +23,10 @@ const VectorDroit = styled.img`
         width: 11.67px;
         height: 19.8px;
     }
+    @media (max-width: 768px) and (min-width: 376px) {
+            width: 19.2px;
+            height: 41.9px;
+        }
 `
 const VectorGauche = styled.img`
     position: absolute;
@@ -43,6 +47,10 @@ const VectorGauche = styled.img`
         width: 11.67px;
         height: 19.8px;
     }
+    @media (max-width: 768px) and (min-width: 376px) {
+            width: 19.2px;
+            height: 41.9px;
+        }
 `
 const CarrouselContainer = styled.section`
         position: relative;
@@ -52,7 +60,7 @@ const CarrouselContainer = styled.section`
         border-radius: 25px;
         mix-blend-mode: normal;
         @media (max-width : 375px) {
-            width 335px;
+            width: 100%;
             height: 255px;
         }
     `

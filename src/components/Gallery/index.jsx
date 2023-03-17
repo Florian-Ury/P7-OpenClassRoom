@@ -7,10 +7,21 @@ const GalleryWrapper = styled.div`
     height: 340px;
     border-radius: 10px;
     margin: 20px;
+    box-sizing: border-box;
     @media (max-width: 375px) {
         max-width: 335px;
-        width: 100%;
+        width: auto;
     }
+    @media (max-width: 768px) and (min-width: 376px) {
+            max-width: 280px;
+            width: auto;
+            max-height: 280px;
+            height: 100%;
+            flex: 50%;
+            margin: 0;
+            margin-top: 20px;
+        }
+    
 `
 
 const ImgWrapper = styled.img`
@@ -20,8 +31,13 @@ const ImgWrapper = styled.img`
     border-radius: 10px;
     object-fit: cover;
     @media (max-width: 375px) {
-        width: 335px;
+        max-width: 335px;
+        width: auto;
     }
+    @media (max-width: 768px) and (min-width: 376px) {
+            width: 280px;
+            height: 280px;  
+        }
     
 `
 
@@ -41,8 +57,14 @@ const TitleWrapper = styled.span`
     padding: 0px 0px 5px 15px;
     align-items: flex-end;
     @media (max-width: 375px) {
-        max-width: 320px;
-        width: 100%;
+        width: 320px;
+    }
+    @media (max-width: 768px) and (min-width: 376px) {
+            min-width: 265px;
+            max-width: min-content;
+            width: auto;
+            max-height: 280px;
+            height: 100%;
     }
 `
 
@@ -50,6 +72,18 @@ const LinkDisplay = styled(Link)`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    box-sizing: border-box;
+    @media (max-width: 375px) {
+        max-width: 335px;
+        width: 100%;
+    }
+    @media (max-width: 768px) and (min-width: 376px) {
+         max-width: 280px;
+            width: 100%;
+            max-height: 280px;
+            height: 100%;
+            
+    }
 `
 
 function Gallery({title, cover, id}) {

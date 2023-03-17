@@ -17,7 +17,10 @@ const ImgAbout = styled.div`
         max-width: 336px;
         width:100%;
         border-radius: 10px;
-        text-align: -webkit-center;
+    }
+    @media (max-width: 768px) and (min-width: 376px) {
+        max-width: 690px;
+        width: 100%;
     }
 `
 
@@ -27,6 +30,10 @@ const ContainerCollapse = styled.div`
     align-items: center;
     @media (max-width: 375px) {
     align-items: normal;
+    }
+    @media (max-width: 768px) and (min-width: 376px) {
+        max-width: 690px;
+        width: 100%;
     }
 `
 
@@ -40,6 +47,10 @@ const CollapseDiv = styled.div`
         width: 100%;
         margin: 10px 0px;
     }
+    @media (max-width: 768px) and (min-width: 376px) {
+        max-width: 690px;
+        width: 100%;
+    }
 `
 const DarkenDiv = styled.div`
     background: #000000;
@@ -50,6 +61,10 @@ const DarkenDiv = styled.div`
         max-width: 336px;
         width:100%;
         border-radius: 10px;
+    }
+    @media (max-width: 768px) and (min-width: 376px) {
+        max-width: 690px;
+        width: 100%;
     }
 `
 
