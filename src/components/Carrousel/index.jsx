@@ -59,6 +59,7 @@ const CarrouselContainer = styled.section`
         background-size: cover;
         border-radius: 25px;
         mix-blend-mode: normal;
+        background-position-y: center;
         @media (max-width : 375px) {
             width: 100%;
             height: 255px;

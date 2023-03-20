@@ -87,7 +87,6 @@ const LinkDisplay = styled(Link)`
 `
 
 function Gallery({title, cover, id}) {
-
     return (
         <GalleryWrapper>
             <LinkDisplay to={`/logement/${id}`}>

@@ -77,7 +77,9 @@ const ListStyled = styled.ul`
     margin-top: -15px;
     border-radius: 15px;
     min-height: 209px;
+    max-height: 209px;
     height: auto;
+    justify-content: space-between;
     @media (max-width: 375px) {
         min-height: 113px;
         font-size: 12px;
@@ -92,7 +94,6 @@ const ListStyled = styled.ul`
 `
 const ListItemStyled = styled.li`
     padding-left: 15px;
-    padding-top: 10px;
     color: ${Colors.primary};
     font-size: 18px;
     height: 100%;
@@ -100,7 +101,6 @@ const ListItemStyled = styled.li`
         max-height: 103px;
         font-size: 12px;
         margin-bottom: 5px;
-        padding-top: 5px;
     }
     @media (max-width: 768px) and (min-width: 376px) {
         font-size: 16px;

@@ -1,13 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import {BrowserRouter as Router} from "react-router-dom";
 import GlobalStyle from "./utils/styles/GlobalStyle";
 import Header from "./components/Header";
-import Home from "./pages/Home";
-import LogementDetails from "./pages/Fiche_Logement";
-import Apropos from "./pages/A_Propos";
-import Error from "./pages/Error";
 import Footer from "./components/Footer";
+import Routing from "./router";
 
 const DesignBody = styled.div`
         display: flex;
@@ -34,12 +31,7 @@ function App() {
                 <DesignApp>
                     <GlobalStyle />
                     <Header />
-                    <Routes>
-                        <Route exact path="/" element={<Home />} />
-                        <Route path="/logement/:id" element={<LogementDetails />} />
-                        <Route path="/a_propos" element={<Apropos />} />
-                        <Route path={"*"} element={<Error />}/>
-                    </Routes>
+                    <Routing />
                     <Footer />
                 </DesignApp>
             </DesignBody>
