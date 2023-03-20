@@ -42,7 +42,7 @@ const TextDescription = styled.p`
     width: 100%;
     color: ${Colors.primary};
     font-size: 18px;
-    background: #F6F6F6;
+    background: ${Colors.secondary};
     padding: 5px;
     padding-left: 10px;
     padding-top: 35px;
@@ -70,7 +70,7 @@ const ListStyled = styled.ul`
     flex-direction: column;
     list-style: none;
     width: 100%;
-    background: #F6F6F6;
+    background: ${Colors.secondary};
     padding: 6px;
     padding-top: 35px;
     margin: 0;
@@ -92,6 +92,7 @@ const ListStyled = styled.ul`
 `
 const ListItemStyled = styled.li`
     padding-left: 15px;
+    padding-top: 10px;
     color: ${Colors.primary};
     font-size: 18px;
     height: 100%;
@@ -99,6 +100,7 @@ const ListItemStyled = styled.li`
         max-height: 103px;
         font-size: 12px;
         margin-bottom: 5px;
+        padding-top: 5px;
     }
     @media (max-width: 768px) and (min-width: 376px) {
         font-size: 16px;
@@ -146,9 +148,8 @@ function Collapse({ title, type, data}) {
             </DivStyled>
 
         )
-    }
-
-    return (
+    } else {
+        return (
             <DivStyled>
                 <TitleDesc>{title}
                     <VectorImg onClick={CollapseOpen} src={vectorImg} alt={"*"} />
@@ -156,7 +157,7 @@ function Collapse({ title, type, data}) {
                 <TextDescription style={{display: `${display}`}}>{data}</TextDescription>
             </DivStyled>
         )
-
+    }
 }
 
 export default Collapse

@@ -3,6 +3,7 @@ import backgroundImg from '../../assets/bodyImg.jpg'
 import styled from "styled-components";
 import logementList from '../../logements.json';
 import Gallery from "../../components/Gallery";
+import Colors from "../../utils/styles/colors";
 
 //Head Body with background image & Title
 const HeadBodyContainer = styled.div`
@@ -75,7 +76,7 @@ const GalleryContainer = styled.div`
         flex-wrap: wrap;
         justify-content: space-around;
         width: auto;
-        background: #F6F6F6;
+        background: ${Colors.secondary};
         padding: 20px;
         border-radius: 25px;
         @media (max-width: 375px) {

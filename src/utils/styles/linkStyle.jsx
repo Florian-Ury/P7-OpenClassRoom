@@ -10,9 +10,6 @@ export const StyledLink = styled(Link)`
   font-style: normal;
   font-size: 24px;
   color : ${ colors.primary };
-  &:focus {
-    text-decoration-line: underline;
-  }
   @media (max-width: 375px) {
             font-size: 12px;
             padding: 0px;

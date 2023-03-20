@@ -8,10 +8,11 @@ import colors from "../../utils/styles/colors";
 import Collapse from "../../components/Collapse";
 import star from "../../assets/star.png";
 import starRed from "../../assets/starRed.png";
+import Colors from "../../utils/styles/colors";
 
 
 const TitleStyled = styled.h1`
-    color: #FF6060;
+    color: ${Colors.primary};
     @media (max-width : 375px) {
         font-size: 18px;
     }
@@ -21,7 +22,7 @@ const TitleStyled = styled.h1`
 
 `
 const LocationContainer = styled.span`
-    color: #FF6060;
+    color: ${Colors.primary};
     @media (max-width : 375px) {
         font-size: 14px;
     }
@@ -101,6 +102,7 @@ const CollapseDiv = styled.div`
     @media (max-width: 768px) and (min-width: 376px) {
             max-width: 690px;
             width: auto;
+            margin-bottom: 40px;
     }
     @media (max-width : 375px) {
         margin-right: 0px;
@@ -202,7 +204,6 @@ function LogementDetails() {
 
 
     if (exist === true) {
-
         const [imageSlider, setImageSlider] = useState([]);
         const currentData = logementList.filter(data => data.id === id)
 
