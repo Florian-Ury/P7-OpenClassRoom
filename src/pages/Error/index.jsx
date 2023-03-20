@@ -28,6 +28,10 @@ const TextError = styled.span`
         font-size: 18px;
         text-align: center;
     }
+    @media (max-width: 768px) and (min-width: 376px) {
+        font-size: 24px;
+        text-align: center;
+    }
 `
 const ErrorTitle = styled.h1`
     font-weight: 700;
@@ -36,6 +40,9 @@ const ErrorTitle = styled.h1`
     margin: 25px;
     @media (max-width: 375px) {
         font-size: 96px;
+    }
+    @media (max-width: 768px) and (min-width: 376px) {
+        font-size: 120px;
     }
 `
 

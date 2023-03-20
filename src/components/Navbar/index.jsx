@@ -28,8 +28,7 @@ export default function Navbar() {
 
 
     const handleResize = () => {
-        setDimensions(window.innerWidth
-        );
+        setDimensions(window.innerWidth);
     }
     function ActivedLink() {
         setPathName(window.location.pathname);
