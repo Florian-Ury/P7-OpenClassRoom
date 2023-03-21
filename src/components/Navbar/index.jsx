@@ -27,7 +27,7 @@ export default function Navbar() {
     const [pathname, setPathName] = useState("")
 
 
-    const handleResize = () => {
+    function handleResize() {
         setDimensions(window.innerWidth);
     }
     function ActivedLink() {

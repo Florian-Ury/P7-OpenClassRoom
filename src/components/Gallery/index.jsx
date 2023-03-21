@@ -90,7 +90,7 @@ function Gallery({title, cover, id}) {
     return (
         <GalleryWrapper>
             <LinkDisplay to={`/logement/${id}`}>
-            <ImgWrapper src={cover} alt={"/"} />
+            <ImgWrapper src={cover} alt={"image du logement."} />
             <TitleWrapper>{title}</TitleWrapper>
             </LinkDisplay>
         </GalleryWrapper>

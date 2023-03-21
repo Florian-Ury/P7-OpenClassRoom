@@ -138,7 +138,7 @@ function Collapse({ title, type, data}) {
         return (
             <DivStyled>
                 <TitleDesc>{title}
-                    <VectorImg onClick={CollapseOpen} src={vectorImg} alt={"*"} />
+                    <VectorImg onClick={CollapseOpen} src={vectorImg} alt={"flèche pour ouvrir le collapse"} />
                 </TitleDesc>
                 <ListStyled style={{display: `${display}`}}>
                     {data.map((stuff, index) => (
@@ -152,7 +152,7 @@ function Collapse({ title, type, data}) {
         return (
             <DivStyled>
                 <TitleDesc>{title}
-                    <VectorImg onClick={CollapseOpen} src={vectorImg} alt={"*"} />
+                    <VectorImg onClick={CollapseOpen} src={vectorImg} alt={"flèche pour ouvrir le collapse"} />
                 </TitleDesc>
                 <TextDescription style={{display: `${display}`}}>{data}</TextDescription>
             </DivStyled>

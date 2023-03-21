@@ -236,7 +236,7 @@ function LogementDetails() {
                                     {[...Array(5)].map((stars, index) => {
                                         const rating = index + 1
                                         return (
-                                            <ImgRating key={index} src={rating <= currentData[0].rating ? starRed : star} alt=""/>
+                                            <ImgRating key={index} src={rating <= currentData[0].rating ? starRed : star} alt="étoiles de note pour le logement."/>
                                         )
 
                                     })}
