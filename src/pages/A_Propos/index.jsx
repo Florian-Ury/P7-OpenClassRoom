@@ -8,6 +8,7 @@ const ImgAbout = styled.div`
     border-radius: 25px;
     max-width: 1920px;
     background: url(${ImageAbout});
+    background-size: cover;
     width: 100%;
     opacity: 0.9;
     object-fit: cover;

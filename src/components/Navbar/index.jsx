@@ -23,7 +23,7 @@ const NavContainer = styled.nav`
 
 
 export default function Navbar() {
-    const [dimensions, setDimensions] = React.useState(window.innerWidth);
+    const [dimensions, setDimensions] = useState(window.innerWidth);
     const [pathname, setPathName] = useState("")
 
 
