@@ -41,7 +41,7 @@ function Header() {
     return (
         <HeaderContainer>
             <LogoImg src={logo} alt={"Logo de l'entreprise"}></LogoImg>
-            <Navbar />
+            <Navbar/>
         </HeaderContainer>
     )
 }

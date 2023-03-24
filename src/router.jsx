@@ -10,7 +10,7 @@ function Routing() {
     return (
             <Routes>
                 <Route exact path="/" element={<Home />} />
-                <Route path="/logement/:id" element={<LogementDetails />} />
+                <Route path="/logement/:id/*" element={<LogementDetails />} />
                 <Route path="/a_propos" element={<Apropos />} />
                 <Route path={"*"} element={<Error />}/>
             </Routes>

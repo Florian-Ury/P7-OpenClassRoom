@@ -30,6 +30,7 @@ export default function Navbar() {
     function handleResize() {
         setDimensions(window.innerWidth);
     }
+
     function ActivedLink() {
         setPathName(window.location.pathname);
     }
