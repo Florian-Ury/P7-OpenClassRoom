@@ -38,7 +38,10 @@ const ListeContainer = styled.ul`
     padding: 5px;
     flex-wrap: wrap;
      @media (max-width : 375px) {
+        width: auto;
+        max-width: 350px;
         padding: 0;
+        flex-wrap: nowrap;
     }
     @media (max-width: 768px) and (min-width: 376px) {
             max-width 190px;
@@ -65,11 +68,13 @@ const ListeStyled = styled.li`
     line-height: 142.6%;
     text-align: center;
     @media (max-width : 375px) {
-        width: 84px;
+        width: 100%;
+        max-width: 84px;
+        min-width: auto;
         height: 18px;
         border-radius: 5px;
         padding: 0;
-        font-size: 10px;
+        font-size: 2vmin;
     }
     @media (max-width: 768px) and (min-width: 376px) {
            min-width: 84px;

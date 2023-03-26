@@ -118,6 +118,7 @@ const VectorImg = styled.img`
 
 
 function Collapse({ title, type, data}) {
+
     let display = "none"
     let vectorImg = VectorDown
     const [currentVector, setVector] = useState(false)
